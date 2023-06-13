@@ -31,7 +31,6 @@
           "api_key" : [ ]
         } ],
         "x-amazon-apigateway-integration" : {
-          "type" : "http",
           "httpMethod" : "ANY",
           "uri" : "http://petstore-demo-endpoint.execute-api.com/petstore/pets",
           "responses" : {
@@ -39,7 +38,8 @@
               "statusCode" : "200"
             }
           },
-          "passthroughBehavior" : "when_no_match"
+          "passthroughBehavior" : "when_no_match",
+          "type" : "http"
         }
       }
     }
